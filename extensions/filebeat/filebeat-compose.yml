@@ -19,8 +19,8 @@ services:
     volumes:
       - ./extensions/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro,Z
       - type: bind
-        source: /var/lib/docker/containers
-        target: /var/lib/docker/containers
+        source: /var/lib/docker
+        target: /var/lib/docker
         read_only: true
       - type: bind
         source: /var/run/docker.sock
